@@ -34,6 +34,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'paradigm/vim-multicursor'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 
@@ -67,8 +69,22 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " ROS specific stuff
 nnoremap <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make)<CR><CR>
 
+" Buffer management
 nnoremap <F11> :bp<CR>
 nnoremap <F12> :bn<CR>
+
+" Latex stuff
+augroup latex_macros " {
+    autocmd!
+    autocmd FileType tex :nnoremap <leader>c :w<CR>:!rubber --pdf --warn all %<CR>
+    autocmd FileType tex :nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
+augroup END " }
+
+" UltiSnips stuff
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EasyMotion
