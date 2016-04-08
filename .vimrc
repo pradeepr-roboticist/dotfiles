@@ -30,12 +30,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'tpope/vim-commentary'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'paradigm/vim-multicursor'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plugin 'wincent/command-t'
+" Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 
@@ -63,27 +64,39 @@ let mapleader = ","
 let g:mapleader = ","
 
 " NERD Tree stuff
+let NERDTreeShowBookmarks=1
 autocmd vimenter * NERDTree
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 " ROS specific stuff
-nnoremap <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make)<CR><CR>
+nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make)<CR><CR>
 
 " Buffer management
+nnoremap <F8> :ls<CR>:vertical sb 
+nnoremap <F9> :bd<CR> 
+nnoremap <F10> :ls<CR>:buffer 
 nnoremap <F11> :bp<CR>
 nnoremap <F12> :bn<CR>
+
+
+" CPP stuff
+augroup cpp_macros " {
+    autocmd!
+    autocmd FileType cpp,c,h :nnoremap <leader>f :%!astyle --mode=c --style=allman<CR>
+augroup END " }
 
 " Latex stuff
 augroup latex_macros " {
     autocmd!
-    autocmd FileType tex :nnoremap <leader>c :w<CR>:!rubber --pdf --warn all %<CR>
+       
+    autocmd FileType tex :nnoremap <leader>c :w<CR>:!rubber --inplace --pdf % <CR><CR>
     autocmd FileType tex :nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
 augroup END " }
 
 " UltiSnips stuff
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -141,8 +154,28 @@ set ignorecase
 " When searching try to be smart about cases 
 set smartcase
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight search results
 set hlsearch
+" create a HLNext (from http://www.youtube.com/watch?v=aHm36-na4-4)
+nnoremap <silent> n n:call HLNext(0.2)<cr>
+nnoremap <silent> N N:call HLNext(0.2)<cr>
+highlight WhiteOnRed ctermbg=white guibg=red
+function! HLNext (blinktime)
+  let [bufnum, lnum, col, off] = getpos('.')
+  let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
+  let target_pat = '\c\%#'.@/
+  let blinks = 3
+  for n in range(1,blinks)
+    let red = matchadd('WhiteOnRed', target_pat, 101)
+    redraw
+    exec 'sleep ' . float2nr(a:blinktime / (2*blinks) * 1000) . 'm'
+    call matchdelete(red)
+    redraw
+    exec 'sleep ' . float2nr(a:blinktime / (2*blinks) * 1000) . 'm'
+  endfor
+endfunction
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Makes search act like search in modern browsers
 set incsearch
