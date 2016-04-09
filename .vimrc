@@ -31,7 +31,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'paradigm/vim-multicursor'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'SirVer/ultisnips'
@@ -59,6 +58,13 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
+
+" Jump to next row in editor instead of next line
+nnoremap j gj
+nnoremap k gk
+
+" If you forget to sudo before editing a file, type w!!
+cmap w!! w !sudo tee % >/dev/null
 
 let mapleader = ","
 let g:mapleader = ","
