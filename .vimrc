@@ -35,6 +35,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'SirVer/ultisnips'
 Plugin 'wincent/command-t'
+Plugin 'mhinz/vim-startify'
+
 " Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
@@ -79,7 +81,7 @@ nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make)<CR><CR>
 
 " Buffer management
 nnoremap <F8> :ls<CR>:vertical sb 
-nnoremap <F9> :bd<CR> 
+nnoremap <F9> :Bclose<CR> 
 nnoremap <F10> :ls<CR>:buffer 
 nnoremap <F11> :bp<CR>
 nnoremap <F12> :bn<CR>
