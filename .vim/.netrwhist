@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/rpradeep/.vim/bundle/Vundle.vim'
 let g:netrw_dirhist_2='/home/rpradeep/.vim/bundle/Vundle.vim/autoload'
+let g:netrw_dirhist_3='/home/rpradeep'
+let g:netrw_dirhist_4='/home/rpradeep/Desktop'
+let g:netrw_dirhist_5='/home/rpradeep'
+let g:netrw_dirhist_6='/home/rpradeep/Documents'

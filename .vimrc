@@ -35,7 +35,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'SirVer/ultisnips'
 Plugin 'wincent/command-t'
-Plugin 'mhinz/vim-startify'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'ervandew/supertab'
+
 
 " Plugin 'honza/vim-snippets'
 
@@ -74,7 +76,8 @@ let g:mapleader = ","
 " NERD Tree stuff
 let NERDTreeShowBookmarks=1
 autocmd vimenter * NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <F7> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      " Closes VIM if NERDTree is the last window
 
 " ROS specific stuff
 nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make)<CR><CR>
@@ -101,10 +104,17 @@ augroup latex_macros " {
     autocmd FileType tex :nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
 augroup END " }
 
+" YCM stuff
+let g:ycm_key_list_select_completion = [‘<C-n>’, ‘<Down>’]
+let g:ycm_key_list_previous_completion = [‘<C-p>’, ‘<Up>’]
+let g:SuperTabDefaultCompletionType = ‘<C-n>’
+
+
+
 " UltiSnips stuff
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -165,24 +175,6 @@ set smartcase
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight search results
 set hlsearch
-" create a HLNext (from http://www.youtube.com/watch?v=aHm36-na4-4)
-nnoremap <silent> n n:call HLNext(0.2)<cr>
-nnoremap <silent> N N:call HLNext(0.2)<cr>
-highlight WhiteOnRed ctermbg=white guibg=red
-function! HLNext (blinktime)
-  let [bufnum, lnum, col, off] = getpos('.')
-  let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
-  let target_pat = '\c\%#'.@/
-  let blinks = 3
-  for n in range(1,blinks)
-    let red = matchadd('WhiteOnRed', target_pat, 101)
-    redraw
-    exec 'sleep ' . float2nr(a:blinktime / (2*blinks) * 1000) . 'm'
-    call matchdelete(red)
-    redraw
-    exec 'sleep ' . float2nr(a:blinktime / (2*blinks) * 1000) . 'm'
-  endfor
-endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Makes search act like search in modern browsers
@@ -212,7 +204,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme molokai 
+colorscheme molokai_dark 
 set background=dark
 
 " Set extra options when running in GUI mode
