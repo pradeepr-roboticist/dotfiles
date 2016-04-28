@@ -104,13 +104,6 @@ augroup latex_macros " {
     autocmd FileType tex :nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
 augroup END " }
 
-" YCM stuff
-let g:ycm_key_list_select_completion = [‘<C-n>’, ‘<Down>’]
-let g:ycm_key_list_previous_completion = [‘<C-p>’, ‘<Up>’]
-let g:SuperTabDefaultCompletionType = ‘<C-n>’
-
-
-
 " UltiSnips stuff
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
