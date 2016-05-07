@@ -80,7 +80,7 @@ nnoremap <F7> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      " Closes VIM if NERDTree is the last window
 
 " ROS specific stuff
-nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make)<CR><CR>
+nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make -DCMAKE_BUILD_TYPE=Release)<CR><CR>
 
 " Buffer management
 nnoremap <F8> :ls<CR>:vertical sb 
