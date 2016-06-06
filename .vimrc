@@ -37,6 +37,7 @@ Plugin 'wincent/command-t'
 Plugin 'mrtazz/DoxygenToolkit.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'vim-scripts/Conque-GDB'
 
 " Plugin 'ervandew/supertab'
 
