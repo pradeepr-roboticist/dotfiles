@@ -34,7 +34,10 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'wincent/command-t'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'mrtazz/DoxygenToolkit.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+
 " Plugin 'ervandew/supertab'
 
 
@@ -94,6 +97,8 @@ augroup cpp_macros " {
     autocmd!
     autocmd FileType cpp,c,h :nnoremap <leader>f :%!astyle --mode=c --style=allman<CR>
 augroup END " }
+
+let g:ycm_path_to_python_interpreter="/usr/bin/python"
 
 " Latex stuff
 augroup latex_macros " {
@@ -196,7 +201,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme molokai_dark 
+colorscheme Monokai
 set background=dark
 
 " Set extra options when running in GUI mode
