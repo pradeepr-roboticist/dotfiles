@@ -37,12 +37,8 @@ Plugin 'wincent/command-t'
 Plugin 'mrtazz/DoxygenToolkit.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'vim-scripts/Conque-GDB'
-
-" Plugin 'ervandew/supertab'
-
-
-" Plugin 'honza/vim-snippets'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-scripts/Conque-Shell'
 
 call vundle#end()            " required
 
@@ -77,10 +73,13 @@ let mapleader = ","
 let g:mapleader = ","
 
 " NERD Tree stuff
-let NERDTreeShowBookmarks=1
-autocmd vimenter * NERDTree
-nnoremap <F7> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      " Closes VIM if NERDTree is the last window
+" let NERDTreeShowBookmarks=1
+" autocmd vimenter * NERDTree
+" nnoremap <F7> :NERDTreeToggle<CR>
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      " Closes VIM if NERDTree is the last window
+
+" Command T
+noremap <leader>l <Esc>:CommandT<CR>
 
 " ROS specific stuff
 nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make -DCMAKE_BUILD_TYPE=Release)<CR><CR>
@@ -104,7 +103,6 @@ let g:ycm_path_to_python_interpreter="/usr/bin/python"
 " Latex stuff
 augroup latex_macros " {
     autocmd!
-       
     autocmd FileType tex :nnoremap <leader>c :w<CR>:!rubber --inplace --pdf % <CR><CR>
     autocmd FileType tex :nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
 augroup END " }
