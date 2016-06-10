@@ -39,6 +39,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/Conque-Shell'
+Plugin 'vim-scripts/restore_view.vim'
 
 call vundle#end()            " required
 
