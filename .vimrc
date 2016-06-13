@@ -136,7 +136,7 @@ map <Leader>k <Plug>(easymotion-k)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Clear highlights on ESC
-map <esc> :noh<CR>
+" map <esc> :noh<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
