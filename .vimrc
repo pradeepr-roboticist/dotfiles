@@ -33,13 +33,18 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'wincent/command-t'
+Plugin 'vim-airline/vim-airline'
+" Plugin 'wincent/command-t'
 Plugin 'mrtazz/DoxygenToolkit.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'vim-scripts/restore_view.vim'
+Plugin 'dahu/VimRegexTutor'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+
 
 call vundle#end()            " required
 
@@ -63,6 +68,11 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
+
+
+" Escape
+inoremap jk <esc>
+
 " Jump to next row in editor instead of next line
 nnoremap j gj
 nnoremap k gk
@@ -79,8 +89,13 @@ let g:mapleader = ","
 " nnoremap <F7> :NERDTreeToggle<CR>
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      " Closes VIM if NERDTree is the last window
 
-" Command T
-noremap <leader>l <Esc>:CommandT<CR>
+" EasyTags
+let $VIMHOME = $HOME."/.vim"
+" set tags=./tags;$VIMHOME
+set tags=./tags;$VIMHOME
+let g:easytags_dynamic_files = 1
+let g:easytags_file = '~/.vim/tags'
+let g:easytags_opts = ['--c++-kinds=+cdefglmnpstuvx']
 
 " ROS specific stuff
 nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make -DCMAKE_BUILD_TYPE=Release)<CR><CR>
@@ -99,6 +114,7 @@ augroup cpp_macros " {
     autocmd FileType cpp,c,h :nnoremap <leader>f :%!astyle --mode=c --style=allman<CR>
 augroup END " }
 
+let g:ycm_confirm_extra_conf = 0
 let g:ycm_path_to_python_interpreter="/usr/bin/python"
 
 " Latex stuff
@@ -107,6 +123,12 @@ augroup latex_macros " {
     autocmd FileType tex :nnoremap <leader>c :w<CR>:!rubber --inplace --pdf % <CR><CR>
     autocmd FileType tex :nnoremap <leader>v :!evince %:r.pdf &<CR><CR>
 augroup END " }
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tagbar
+" map <leader>tb :TagbarToggle<cr>
+" map <leader>t :TagbarOpenAutoClose<cr>
+
 
 " UltiSnips stuff
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -201,7 +223,7 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme Monokai
+colorscheme molokai
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -274,6 +296,7 @@ map <c-space> ?
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -287,6 +310,7 @@ map <leader>bd :Bclose<cr>
 map <leader>ba :1,1000 bd!<cr>
 
 " Useful mappings for managing tabs
+noremap tt :tab split<cr>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
