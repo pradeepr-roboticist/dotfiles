@@ -1,0 +1,113 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+#	/home/rpradeep/.vimrc	/^vnoremap <silent> # :call VisualSelection('b')<CR>$/;"	m	language:Vim
+$VIMHOME	/home/rpradeep/.vimrc	/^let $VIMHOME = $HOME."\/.vim"$/;"	v	language:Vim
+*	/home/rpradeep/.vimrc	/^vnoremap <silent> * :call VisualSelection('f')<CR>$/;"	m	language:Vim
+0	/home/rpradeep/.vimrc	/^map 0 ^$/;"	m	language:Vim
+<C-h>	/home/rpradeep/.vimrc	/^map <C-h> <C-W>h$/;"	m	language:Vim
+<C-j>	/home/rpradeep/.vimrc	/^map <C-j> <C-W>j$/;"	m	language:Vim
+<C-k>	/home/rpradeep/.vimrc	/^map <C-k> <C-W>k$/;"	m	language:Vim
+<C-l>	/home/rpradeep/.vimrc	/^map <C-l> <C-W>l$/;"	m	language:Vim
+<c-space>	/home/rpradeep/.vimrc	/^map <c-space> ?$/;"	m	language:Vim
+<D-j>	/home/rpradeep/.vimrc	/^  nmap <D-j> <M-j>$/;"	m	language:Vim
+<D-j>	/home/rpradeep/.vimrc	/^  vmap <D-j> <M-j>$/;"	m	language:Vim
+<D-k>	/home/rpradeep/.vimrc	/^  nmap <D-k> <M-k>$/;"	m	language:Vim
+<D-k>	/home/rpradeep/.vimrc	/^  vmap <D-k> <M-k>$/;"	m	language:Vim
+<F10>	/home/rpradeep/.vimrc	/^nnoremap <F10> :ls<CR>:buffer $/;"	m	language:Vim
+<F11>	/home/rpradeep/.vimrc	/^nnoremap <F11> :bp<CR>$/;"	m	language:Vim
+<F12>	/home/rpradeep/.vimrc	/^nnoremap <F12> :bn<CR>$/;"	m	language:Vim
+<F5>	/home/rpradeep/.vimrc	/^nnoremap <silent> <F5> :!(cd ~\/Documents\/ugv_catkin_ws\/ ; catkin_make -DCMAKE_BUILD_TYPE=Release)<CR><CR>$/;"	m	language:Vim
+<F8>	/home/rpradeep/.vimrc	/^nnoremap <F8> :ls<CR>:vertical sb $/;"	m	language:Vim
+<F9>	/home/rpradeep/.vimrc	/^nnoremap <F9> :Bclose<CR> $/;"	m	language:Vim
+<leader><cr>	/home/rpradeep/.vimrc	/^map <silent> <leader><cr> :noh<cr>$/;"	m	language:Vim
+<leader><space>	/home/rpradeep/.vimrc	/^map <leader><space> :vimgrep \/\/ <C-R>%<C-A><right><right><right><right><right><right><right><right><right>$/;"	m	language:Vim
+<leader>ba	/home/rpradeep/.vimrc	/^map <leader>ba :1,1000 bd!<cr>$/;"	m	language:Vim
+<leader>bd	/home/rpradeep/.vimrc	/^map <leader>bd :Bclose<cr>$/;"	m	language:Vim
+<leader>cc	/home/rpradeep/.vimrc	/^map <leader>cc :botright cope<cr>$/;"	m	language:Vim
+<leader>cd	/home/rpradeep/.vimrc	/^map <leader>cd :cd %:p:h<cr>:pwd<cr>$/;"	m	language:Vim
+<leader>co	/home/rpradeep/.vimrc	/^map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg$/;"	m	language:Vim
+<leader>g	/home/rpradeep/.vimrc	/^map <leader>g :vimgrep \/\/ **\/*.<left><left><left><left><left><left><left>$/;"	m	language:Vim
+<Leader>j	/home/rpradeep/.vimrc	/^map <Leader>j <Plug>(easymotion-j)$/;"	m	language:Vim
+<Leader>k	/home/rpradeep/.vimrc	/^map <Leader>k <Plug>(easymotion-k)$/;"	m	language:Vim
+<Leader>m	/home/rpradeep/.vimrc	/^noremap <Leader>m mmHmt:%s\/<C-V><cr>\/\/ge<cr>'tzt'm$/;"	m	language:Vim
+<leader>n	/home/rpradeep/.vimrc	/^map <leader>n :cn<cr>$/;"	m	language:Vim
+<leader>p	/home/rpradeep/.vimrc	/^map <leader>p :cp<cr>$/;"	m	language:Vim
+<leader>pp	/home/rpradeep/.vimrc	/^map <leader>pp :setlocal paste!<cr>$/;"	m	language:Vim
+<leader>q	/home/rpradeep/.vimrc	/^map <leader>q :e ~\/buffer<cr>$/;"	m	language:Vim
+<leader>r	/home/rpradeep/.vimrc	/^vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>$/;"	m	language:Vim
+<leader>s?	/home/rpradeep/.vimrc	/^map <leader>s? z=$/;"	m	language:Vim
+<leader>sa	/home/rpradeep/.vimrc	/^map <leader>sa zg$/;"	m	language:Vim
+<leader>sn	/home/rpradeep/.vimrc	/^map <leader>sn ]s$/;"	m	language:Vim
+<leader>sp	/home/rpradeep/.vimrc	/^map <leader>sp [s$/;"	m	language:Vim
+<leader>ss	/home/rpradeep/.vimrc	/^map <leader>ss :setlocal spell!<cr>$/;"	m	language:Vim
+<leader>tc	/home/rpradeep/.vimrc	/^map <leader>tc :tabclose<cr>$/;"	m	language:Vim
+<leader>te	/home/rpradeep/.vimrc	/^map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>\/$/;"	m	language:Vim
+<leader>tm	/home/rpradeep/.vimrc	/^map <leader>tm :tabmove$/;"	m	language:Vim
+<leader>tn	/home/rpradeep/.vimrc	/^map <leader>tn :tabnew<cr>$/;"	m	language:Vim
+<leader>to	/home/rpradeep/.vimrc	/^map <leader>to :tabonly<cr>$/;"	m	language:Vim
+<M-j>	/home/rpradeep/.vimrc	/^nmap <M-j> mz:m+<cr>`z$/;"	m	language:Vim
+<M-j>	/home/rpradeep/.vimrc	/^vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z$/;"	m	language:Vim
+<M-k>	/home/rpradeep/.vimrc	/^nmap <M-k> mz:m-2<cr>`z$/;"	m	language:Vim
+<M-k>	/home/rpradeep/.vimrc	/^vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z$/;"	m	language:Vim
+<space>	/home/rpradeep/.vimrc	/^map <space> \/$/;"	m	language:Vim
+accMaxBack	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double accMaxBack;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+accMaxFwd	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double accMaxFwd;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+actuatorEffortPenaltyFactor	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double actuatorEffortPenaltyFactor;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+angularConvergenceThreshold	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double angularConvergenceThreshold;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+Bclose	/home/rpradeep/.vimrc	/^command! Bclose call <SID>BufcloseCloseIt()$/;"	c	language:Vim
+BufcloseCloseIt	/home/rpradeep/.vimrc	/^function! <SID>BufcloseCloseIt()$/;"	f	language:Vim
+CmdLine	/home/rpradeep/.vimrc	/^function! CmdLine(str)$/;"	f	language:Vim
+config	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^        DADPlannerConfig config;$/;"	l	language:C++
+cpp_macros	/home/rpradeep/.vimrc	/^augroup cpp_macros " {$/;"	a	language:Vim
+curvatureMax	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double curvatureMax;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+DADPlannerConfig	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    DADPlannerConfig()$/;"	f	language:C++	class:dad_local_planner::DADPlannerConfig
+DADPlannerConfig	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^class DADPlannerConfig$/;"	c	language:C++	namespace:dad_local_planner
+dad_local_planner	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^namespace dad_local_planner$/;"	n	language:C++
+DeleteTrailingWS	/home/rpradeep/.vimrc	/^func! DeleteTrailingWS()$/;"	f	language:Vim
+detourCostFactor	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double detourCostFactor;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+dynamicObstacleCollisionRiskFactor	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double dynamicObstacleCollisionRiskFactor;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+dynamicObstaclesConfigFilePath	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    std::string dynamicObstaclesConfigFilePath;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+g:EasyMotion_do_mapping	/home/rpradeep/.vimrc	/^let g:EasyMotion_do_mapping = 0 " Disable default mappings$/;"	v	language:Vim
+g:EasyMotion_smartcase	/home/rpradeep/.vimrc	/^let g:EasyMotion_smartcase = 1$/;"	v	language:Vim
+g:easytags_dynamic_files	/home/rpradeep/.vimrc	/^let g:easytags_dynamic_files = 1$/;"	v	language:Vim
+g:easytags_file	/home/rpradeep/.vimrc	/^let g:easytags_file = '~\/.vim\/tags'$/;"	v	language:Vim
+g:easytags_opts	/home/rpradeep/.vimrc	/^let g:easytags_opts = ['--c++-kinds=+cdefglmnpstuvx']$/;"	v	language:Vim
+g:mapleader	/home/rpradeep/.vimrc	/^let g:mapleader = ","$/;"	v	language:Vim
+g:UltiSnipsExpandTrigger	/home/rpradeep/.vimrc	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v	language:Vim
+g:UltiSnipsJumpBackwardTrigger	/home/rpradeep/.vimrc	/^let g:UltiSnipsJumpBackwardTrigger="<s-tab>"$/;"	v	language:Vim
+g:UltiSnipsJumpForwardTrigger	/home/rpradeep/.vimrc	/^let g:UltiSnipsJumpForwardTrigger="<tab>"$/;"	v	language:Vim
+g:ycm_confirm_extra_conf	/home/rpradeep/.vimrc	/^let g:ycm_confirm_extra_conf = 0$/;"	v	language:Vim
+g:ycm_path_to_python_interpreter	/home/rpradeep/.vimrc	/^let g:ycm_path_to_python_interpreter="\/usr\/bin\/python"$/;"	v	language:Vim
+goalTolerance	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double goalTolerance;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+gv	/home/rpradeep/.vimrc	/^vnoremap <silent> gv :call VisualSelection('gv')<CR>$/;"	m	language:Vim
+HasPaste	/home/rpradeep/.vimrc	/^function! HasPaste()$/;"	f	language:Vim
+j	/home/rpradeep/.vimrc	/^map j gj$/;"	m	language:Vim
+j	/home/rpradeep/.vimrc	/^nnoremap j gj$/;"	m	language:Vim
+jk	/home/rpradeep/.vimrc	/^inoremap jk <esc>$/;"	m	language:Vim
+k	/home/rpradeep/.vimrc	/^map k gk$/;"	m	language:Vim
+k	/home/rpradeep/.vimrc	/^nnoremap k gk$/;"	m	language:Vim
+latex_macros	/home/rpradeep/.vimrc	/^augroup latex_macros " {$/;"	a	language:Vim
+loadFromFile	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    static DADPlannerConfig loadFromFile(const std::string fullFilePath = "\/home\/rpradeep\/Desktop\/kft\/config\/config.ini" )$/;"	f	language:C++	class:dad_local_planner::DADPlannerConfig
+mapleader	/home/rpradeep/.vimrc	/^let mapleader = ","$/;"	v	language:Vim
+motionPrimitiveFilePath	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    std::string motionPrimitiveFilePath;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+negativeVelocityPenaltyFactor	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double negativeVelocityPenaltyFactor;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+printConfig	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    void printConfig() const$/;"	f	language:C++	class:dad_local_planner::DADPlannerConfig
+pt	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^        boost::property_tree::ptree pt;$/;"	l	language:C++
+read_ini	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^        boost::property_tree::ini_parser::read_ini ( fullFilePath.c_str() , pt );$/;"	p	language:C++	class:dad_local_planner::DADPlannerConfig::boost::property_tree::ini_parser
+referenceDeviationPenaltyFactor	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double referenceDeviationPenaltyFactor;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+robotRadius	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double robotRadius;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+s	/home/rpradeep/.vimrc	/^nmap s <Plug>(easymotion-overwin-f)$/;"	m	language:Vim
+skipCostFactor	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double skipCostFactor;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+spatialConvergenceThreshold	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double spatialConvergenceThreshold;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+spatialHashLength	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double spatialHashLength;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+spatialHashSize	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    int spatialHashSize;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+spatialHashTimeTolerance	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double spatialHashTimeTolerance;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+staticObstacleCollisionRiskFactor	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double staticObstacleCollisionRiskFactor;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+subOptimalityEps	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double subOptimalityEps;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+trajResolution	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    int trajResolution;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+tt	/home/rpradeep/.vimrc	/^noremap tt :tab split<cr>$/;"	m	language:Vim
+tubeSize	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double tubeSize;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+velMaxBack	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double velMaxBack;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+velMaxFwd	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double velMaxFwd;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig
+VisualSelection	/home/rpradeep/.vimrc	/^function! VisualSelection(direction) range$/;"	f	language:Vim
+w!!	/home/rpradeep/.vimrc	/^cmap w!! w !sudo tee % >\/dev\/null$/;"	m	language:Vim
+wiggleCostFactor	/home/rpradeep/Desktop/kft/include/DADPlannerConfig.h	/^    double wiggleCostFactor;$/;"	m	language:C++	class:dad_local_planner::DADPlannerConfig

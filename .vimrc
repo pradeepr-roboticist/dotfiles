@@ -1,4 +1,7 @@
 "
+" Put this in the .profile file :
+" export TERM='xterm-256color' 
+" 
 " Sections:
 "    -> General
 "    -> VIM user interface
