@@ -45,9 +45,8 @@ Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'dahu/VimRegexTutor'
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
-
+" Plugin 'xolox/vim-easytags'
+" Plugin 'xolox/vim-misc'
 
 call vundle#end()            " required
 
@@ -284,6 +283,8 @@ set wrap "Wrap lines
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
+" Add cscope db
+cs add $CSCOPE_DB
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -299,6 +300,9 @@ map <c-space> ?
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+" Smart way to move between windows
+map <S-h> :tabprevious<cr>
+map <S-l> :tabnext<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
