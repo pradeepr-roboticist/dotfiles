@@ -305,6 +305,9 @@ map <S-h> :tabprevious<cr>
 map <S-l> :tabnext<cr>
 
 " Smart way to move between windows
+map <S-h> :tabp<cr>
+map <S-l> :tabn<cr>
+" Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
