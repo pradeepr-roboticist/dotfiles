@@ -45,6 +45,7 @@ Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'dahu/VimRegexTutor'
+Plugin 'vim-scripts/MatlabFilesEdition'
 " Plugin 'xolox/vim-easytags'
 " Plugin 'xolox/vim-misc'
 
