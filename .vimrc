@@ -37,17 +37,15 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
-" Plugin 'wincent/command-t'
 Plugin 'mrtazz/DoxygenToolkit.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
-" Plugin 'majutsushi/tagbar'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'dahu/VimRegexTutor'
-Plugin 'vim-scripts/MatlabFilesEdition'
-" Plugin 'xolox/vim-easytags'
-" Plugin 'xolox/vim-misc'
+Plugin 'lervag/vimtex'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 
@@ -86,20 +84,23 @@ cmap w!! w !sudo tee % >/dev/null
 let mapleader = ","
 let g:mapleader = ","
 
+let localleader = '\'
+
 " NERD Tree stuff
 " let NERDTreeShowBookmarks=1
 " autocmd vimenter * NERDTree
 " nnoremap <F7> :NERDTreeToggle<CR>
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      " Closes VIM if NERDTree is the last window
 
-" EasyTags
-let $VIMHOME = $HOME."/.vim"
-" set tags=./tags;$VIMHOME
-set tags=./tags;$VIMHOME
-let g:easytags_dynamic_files = 1
-let g:easytags_file = '~/.vim/tags'
-let g:easytags_opts = ['--c++-kinds=+cdefglmnpstuvx']
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+"
 " ROS specific stuff
 nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make -DCMAKE_BUILD_TYPE=Release)<CR><CR>
 
