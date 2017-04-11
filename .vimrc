@@ -38,8 +38,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'mrtazz/DoxygenToolkit.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'rdnetto/YCM-Generator'
+Plugin 'alpertuna/vim-header'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab'
@@ -86,6 +87,11 @@ let g:mapleader = ","
 
 let localleader = '\'
 
+" Related to vim-header plugin
+let g:header_field_author = 'Pradeep Rajendran'
+let g:header_field_author_email = 'pradeepunique1989@gmail.com'
+map <F4> :AddHeader<CR>"
+
 " NERD Tree stuff
 " let NERDTreeShowBookmarks=1
 " autocmd vimenter * NERDTree
@@ -111,7 +117,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 "
 " ROS specific stuff
-nnoremap <silent> <F5> :!(cd ~/Documents/ugv_catkin_ws/ ; catkin_make -DCMAKE_BUILD_TYPE=Release)<CR><CR>
+nnoremap <silent> <F5> :!(cd ~/catkin_ws/ ; catkin_make )<CR><CR>
 
 " Buffer management
 nnoremap <F8> :ls<CR>:vertical sb 
