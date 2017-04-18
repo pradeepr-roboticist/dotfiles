@@ -47,6 +47,7 @@ Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'dahu/VimRegexTutor'
 Plugin 'lervag/vimtex'
+Plugin 'klen/python-mode'
 
 call vundle#end()            " required
 
