@@ -45,6 +45,7 @@ Plugin 'vim-utils/vim-cscope'
 Plugin 'seyDoggy/vim-watchforchanges'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jpalardy/vim-slime'
 
 call vundle#end()            " required
 
@@ -68,7 +69,14 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
-
+augroup AutoSaveFolds
+  autocmd!
+  " view files are about 500 bytes
+  " bufleave but not bufwinleave captures closing 2nd tab
+  " nested is needed by bufwrite* (if triggered via other autocmd)
+  autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
+  autocmd BufWinEnter ?* silent! loadview
+augroup end
 
 " Escape
 inoremap jk <esc>
